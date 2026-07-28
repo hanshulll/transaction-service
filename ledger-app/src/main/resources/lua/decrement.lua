@@ -1,0 +1,3 @@
+-- KEYS[1] = account:{id}:balance
+-- ARGV[1] = amount to subtract
+-- TODO: atomic read-modify-write, return new balance
