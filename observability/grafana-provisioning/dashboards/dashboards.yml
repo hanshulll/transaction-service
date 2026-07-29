@@ -1,0 +1,10 @@
+apiVersion: 1
+
+providers:
+  - name: payment-ledger
+    orgId: 1
+    folder: ""
+    type: file
+    options:
+      path: /etc/grafana/provisioning/dashboards
+# TODO (Week 7): drop the RED dashboard + business panel JSON model in this directory
