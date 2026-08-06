@@ -40,6 +40,18 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
+  kafka-ui:
+    image: ghcr.io/kafbat/kafka-ui:latest
+    container_name: kafka-ui
+    ports:
+      - "9091:9091"
+    environment:
+      DYNAMIC_CONFIG_ENABLED: 'true'
+      KAFKA_CLUSTERS_0_NAME: 'local-kraft-cluster'
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: 'kafka:9092'
+    depends_on:
+      - kafka
+
   ledger-app:
     build: ./ledger-app
     depends_on:
