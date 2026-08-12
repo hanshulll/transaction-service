@@ -1,6 +1,6 @@
 .PHONY: start stop test demo build logs
 
-start: ## Build images and start the full stack
+start: build ## Build jars, then build images and start the full stack
 	docker compose up --build -d
 
 stop: ## Tear down the stack
