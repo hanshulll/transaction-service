@@ -21,7 +21,7 @@ public class OutboxRelay {
 		this.kafkaTemplate = kafkaTemplate;
 	}
 
-	@Scheduled(fixedDelayString = "${outbox.relay.poll-interval-ms:500}")
+//	@Scheduled(fixedDelayString = "${outbox.relay.poll-interval-ms:500}")
 	public void pollAndPublish() {
 		throw new UnsupportedOperationException("TODO: findUnpublishedBatch, publish each, mark publishedAt");
 	}

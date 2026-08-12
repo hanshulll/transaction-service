@@ -3,7 +3,7 @@ spring:
     name: ledger-consumer
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/payment_ledger_view
+    url: jdbc:postgresql://postgres.transaction-service.orb.local/payment_ledger_view
     username: ledger
     password: ledger
 
